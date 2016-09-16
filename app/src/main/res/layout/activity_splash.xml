@@ -11,7 +11,7 @@
   tools:context="com.feathersoft.githubber.SplashActivity">
 
   <TextView
-    android:id="@+id/splash.app_name"
+    android:id="@+id/splash.text.app_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/app_name"
@@ -22,8 +22,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_below="@+id/splash.app_name"
-    android:layout_alignEnd="@+id/splash.app_name"
+    android:layout_below="@+id/splash.text.app_name"
+    android:layout_alignEnd="@+id/splash.text.app_name"
     android:gravity="center_vertical">
 
     <TextView
@@ -35,6 +35,7 @@
       android:layout_marginEnd="@dimen/content_margin_half"/>
 
     <ImageView
+      android:id="@+id/splash.img.github_shadow"
       android:layout_width="28dp"
       android:layout_height="28dp"
       android:src="@drawable/ic_github_shadow"/>
