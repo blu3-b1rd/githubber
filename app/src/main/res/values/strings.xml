@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">GitHubber</string>
+
+  <string name="splash.message">"An open client for"</string>
+
+  <string name="home.no_inspiration">"No more inspirational messages for you :("</string>
 </resources>
