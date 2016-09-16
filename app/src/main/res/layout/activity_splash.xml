@@ -7,12 +7,37 @@
   android:layout_height="match_parent"
   android:gravity="center"
   android:padding="@dimen/content_margin"
+  android:background="@android:color/black"
   tools:context="com.feathersoft.githubber.SplashActivity">
 
   <TextView
+    android:id="@+id/splash.app_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textColor=""
-    tools:text="GitHubber"/>
+    android:text="@string/app_name"
+    android:textSize="64sp"
+    android:textColor="@android:color/white"/>
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/splash.app_name"
+    android:layout_alignEnd="@+id/splash.app_name"
+    android:gravity="center_vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+      android:text="An open client for"
+      android:layout_marginRight="@dimen/content_margin"/>
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_github_shadow"/>
+
+  </LinearLayout>
 
 </RelativeLayout>
