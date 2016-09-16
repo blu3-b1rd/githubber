@@ -14,7 +14,7 @@
   </style>
 
   <style name="GitHubber.Toolbar" parent="Widget.AppCompat.ActionBar">
-    <item name="background">?attr/colorPrimary</item>
+    <item name="android:background">?attr/colorPrimary</item>
     <item name="android:minHeight">?attr/actionBarSize</item>
   </style>
 

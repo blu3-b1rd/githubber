@@ -15,12 +15,12 @@ abstract class GitHubberActivity: AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setupContentView()
+    setupContent()
   }
 
   open fun setupContentView() {
     setContentView(getContentViewRes())
     ButterKnife.bind(this)
-    setupContent()
   }
 
   fun rootView(): View {

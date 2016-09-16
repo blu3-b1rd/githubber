@@ -6,11 +6,7 @@
   android:layout_height="match_parent"
   tools:context="com.feathersoft.githubber.HomeActivity">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    style="@style/GitHubber.Toolbar"/>
+  <include layout="@layout/layout_toolbar"/>
 
   <TextView
     android:id="@+id/home.text.inspire"
