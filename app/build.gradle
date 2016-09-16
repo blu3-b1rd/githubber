@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion 24
+  buildToolsVersion "24.0.2"
+
+  defaultConfig {
+    applicationId "com.feathersoft.githuber"
+    minSdkVersion 16
+    targetSdkVersion 24
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
+}
+
+dependencies {
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  compile "com.android.support:appcompat-v7:$support_version"
+  compile "com.android.support:design:$support_version"
+
+  // ButterKnife for view binding
+  compile "com.jakewharton:butterknife:$butterknife_version"
+  kapt "com.jakewharton:butterknife-compiler:$butterknife_version"
+
+  // Retrofit for REST apis
+  compile "com.squareup.retrofit2:retrofit:2.1.0"
+  compile "com.squareup.retrofit2:converter-gson:2.1.0"
+
+  compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+}
+repositories {
+  mavenCentral()
+}
