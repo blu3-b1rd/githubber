@@ -1,5 +1,6 @@
 package com.feathersoft.githubber.architecture
 
+import android.support.annotation.StringRes
 import android.support.v7.widget.Toolbar
 import butterknife.BindView
 import com.feathersoft.githubber.R
@@ -14,7 +15,16 @@ abstract class GitHubberToolBarActivity: GitHubberActivity() {
 
   override fun setupContentView() {
     super.setupContentView()
+    setupToolbar()
+  }
+
+  fun setupToolbar() {
+    mToolbar.title = getString(getPageTitle())
     setSupportActionBar(mToolbar)
+  }
+
+  @StringRes fun getPageTitle(): Int {
+    return R.string.app_name
   }
 
 }
