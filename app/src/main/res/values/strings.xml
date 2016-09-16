@@ -4,4 +4,5 @@
   <string name="splash.message">"An open client for"</string>
 
   <string name="home.no_inspiration">"No more inspirational messages for you :("</string>
+  <string name="home.more_inspiration">"Inspire me!"</string>
 </resources>

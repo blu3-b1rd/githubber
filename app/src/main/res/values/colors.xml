@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorAccent">#69F0AE</color>
+  <color name="colorAccent">#0091EA</color>
+  <color name="colorAccentHighlight">#80D8FF</color>
 
   <color name="softGray">#ECEFF1</color>
 </resources>
