@@ -7,7 +7,11 @@ import android.support.annotation.NonNull
 import android.support.annotation.Nullable
 import android.widget.TextView
 import butterknife.BindView
+import butterknife.OnClick
 import com.feathersoft.githubber.architecture.GitHubberToolBarActivity
+import com.feathersoft.githubber.architecture.network.ApiSubscriber
+import com.feathersoft.githubber.architecture.network.GitHubFun
+import com.feathersoft.githubber.ui.GitHubberProgress
 
 class HomeActivity : GitHubberToolBarActivity() {
 
@@ -41,6 +45,22 @@ class HomeActivity : GitHubberToolBarActivity() {
     mTextInspire.text =
       if(mInspirationalMessage.isNullOrEmpty()) getString(R.string.home_no_inspiration)
       else mInspirationalMessage
+  }
+
+  @OnClick(R.id.home_btn_inspire_me)
+  fun onInspirationRequested() {
+    GitHubberProgress.show(this)
+    GitHubFun.inspire().subscribe(object: ApiSubscriber<String>() {
+      override fun onNext(response: String) {
+        GitHubberProgress.dismiss()
+        inspireMyUser(response)
+      }
+
+      override fun onError(error: Throwable?) {
+        GitHubberProgress.dismiss()
+        inspireMyUser(null)
+      }
+    })
   }
 
 }

@@ -58,7 +58,7 @@ object GitHubApi {
 
   class DelayInterceptor: Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
-      Thread.sleep(2000)
+//      Thread.sleep(2000)
       return chain.proceed(chain.request())
     }
   }

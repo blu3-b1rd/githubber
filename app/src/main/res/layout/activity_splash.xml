@@ -38,7 +38,7 @@
       android:id="@+id/splash.img.github_shadow"
       android:layout_width="28dp"
       android:layout_height="28dp"
-      android:src="@drawable/ic_github_shadow"/>
+      android:src="@drawable/ic_github_shadow_white"/>
 
   </LinearLayout>
 

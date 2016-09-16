@@ -14,6 +14,12 @@
     <item name="android:windowDisablePreview">true</item>
   </style>
 
+  <style name="GitHubber.Theme.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+  </style>
+
   <style name="GitHubber.Widget.Toolbar" parent="Widget.AppCompat.ActionBar">
     <item name="android:background">?attr/colorPrimary</item>
     <item name="android:minHeight">?attr/actionBarSize</item>
