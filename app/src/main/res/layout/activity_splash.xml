@@ -31,11 +31,12 @@
       android:layout_height="wrap_content"
       android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
       android:text="An open client for"
-      android:layout_marginRight="@dimen/content_margin"/>
+      android:layout_marginStart="@dimen/content_margin_half"
+      android:layout_marginEnd="@dimen/content_margin_half"/>
 
     <ImageView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="28dp"
+      android:layout_height="28dp"
       android:src="@drawable/ic_github_shadow"/>
 
   </LinearLayout>
